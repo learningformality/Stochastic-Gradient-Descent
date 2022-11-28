@@ -108,9 +108,9 @@ test_set = np.array([data[i] for i in range(len(data)-200, len(data))], dtype=ob
 
 for l in range(len(n)):
 
-	weights = np.array([SGD(n[l], data) for i in range(30)]) # generate 30 mean parameters via SGD
-	losses = np.array([loss(weights[i], test_set) for i in range(len(weights))]) # generate 30 empirical losses on the test set
-	errors = np.array([error(weights[i], test_set) for i in range(len(weights))]) # generate 30 empirical binary error values on the test set
+	weights = np.array([SGD(n[l], data) for i in range(50)]) # generate 50 mean parameters via SGD
+	losses = np.array([loss(weights[i], test_set) for i in range(len(weights))]) # generate 50 empirical losses on the test set
+	errors = np.array([error(weights[i], test_set) for i in range(len(weights))]) # generate 50 empirical binary error values on the test set
 
 	min_loss = np.min(losses) # find minimum loss
 
